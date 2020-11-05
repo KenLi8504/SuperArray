@@ -110,4 +110,14 @@ public class SuperArray{
     data = data2;
     return a;
   }
+
+  public int indexOf(String s){
+    int a = -1;
+    for (int i = 0; i < size; i++){
+      if (data[i].equals(s)){
+        a = i;
+      }
+    }
+    return a;
+  }
 }
