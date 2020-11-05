@@ -7,6 +7,11 @@ public class SuperArray{
     size = 0;
   }
 
+  public SuperArray(int initialCapacity){
+    data = new String[initialCapacity];
+    size = 0;
+  }
+
   public int size (){
     return size;
   }
@@ -36,7 +41,7 @@ public class SuperArray{
   }
 
   private void resize (){
-    String data2 [] = new String [size + 5];
+    String data2 [] = new String [size + data.length/2];
     for (int i = 0; i < size; i ++){
       data2[i] = data[i];
     }
@@ -73,5 +78,23 @@ public class SuperArray{
       }
     }
     return false;
+  }
+
+  public void add(int index, String element){
+    String [] data2;
+    if (data.length == size){
+      data2 = new String [data.length * 3 / 2];
+    }
+    else {
+      data2 = new String [data.length];
+    }
+    for (int i = 0; i < index; i ++){
+      data2[i] = data[i];
+    }
+    data2[index] = element;
+    for (int i = index; i < data.length - 1; i ++){
+      data2[i + 1] = data[i];
+    }
+    data = data2;
   }
 }
