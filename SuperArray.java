@@ -103,19 +103,17 @@ public class SuperArray{
 
   public String remove(int index){
     String [] data2 = new String [data.length];
-    if (index == 0){
-      
+    int j = 0;
+    for (int i = 0; i < size; i++){
+      if (i != index){
+        data2[j] = data[i];
+        j++;
+      }
     }
-    for (int i = 0; i < index; i++){
-      data2[i] = data[i];
-    }
-    for (int i = index + 1; i < data.length; i++){
-      data2[i-1] = data[i];
-    }
-    String a = data[index];
+    String removed = data[index];
     data = data2;
     size = size - 1;
-    return a;
+    return removed;
   }
 
   public int indexOf(String s){
