@@ -143,4 +143,19 @@ public class SuperArray{
     }
     return a;
   }
+
+  public boolean equals(SuperArray other){
+    int CountDiffElements = 0;
+    if (size == other.size()){
+      for (int i = 0; i < size; i++){
+        if (data[i].equals(other.get(i))){
+          CountDiffElements = CountDiffElements;
+        }
+        else{
+          CountDiffElements++;
+        }
+      }
+    }
+    return CountDiffElements == 0;
+  }
 }
