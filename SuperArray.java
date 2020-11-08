@@ -118,7 +118,7 @@ public class SuperArray{
 
   public int indexOf(String s){
     int a = -1;
-    for (int i = 0; i < size; i++){
+    for (int i = size - 1; i >= 0; i--){
       if (data[i].equals(s)){
         a = i;
       }
