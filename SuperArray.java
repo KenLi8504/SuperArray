@@ -8,11 +8,14 @@ public class SuperArray{
   }
 
   public SuperArray(int initialCapacity){
+    if (initialCapacity < 0){
+      throw new IllegalArgumentException("Your capacity " +  initialCapacity+ " is negative");
+    }
     data = new String[initialCapacity];
     size = 0;
   }
 
-  public int size (){
+  int size (){
     return size;
   }
 
@@ -31,6 +34,7 @@ public class SuperArray{
   }
 
   public String get(int index){
+    if (index < 0){
     return data[index];
   }
 
@@ -41,7 +45,7 @@ public class SuperArray{
   }
 
   private void resize (){
-    String data2 [] = new String [size + data.length/2];
+    String data2 [] = new String [size + data.length/2 + 1];
     for (int i = 0; i < size; i ++){
       data2[i] = data[i];
     }
