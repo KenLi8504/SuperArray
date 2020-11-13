@@ -101,7 +101,7 @@ public class SuperArray{
     if (index < 0){
       throw new IndexOutOfBoundsException("Your index " + index + " is negative");
     }
-    if (index >= size()){
+    if (index > size()){
       throw new IndexOutOfBoundsException("Your index " + index + " is larger than the size");
     }
     String [] data2;
