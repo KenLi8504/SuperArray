@@ -1,3 +1,4 @@
+import java.util.Arrays;
 public class Demo{
   public static void removeDuplicates(SuperArray s){
     for (int i = 0; i<s.size();){
@@ -52,49 +53,52 @@ public class Demo{
   }
 
   public static void main(String[]args){
-    SuperArray words = new SuperArray();
-    words.add("kani");
-    words.add("uni");
-    words.add("ebi");
-    words.add("una");
-    words.add("una");
-    words.add("ebi");
-    words.add("kani");
-    words.add("una");
-    words.add("una");
-    words.add("ebi");
-    words.add("toro");
-    System.out.println(words.lastIndexOf("kani"));
-    System.out.println(words.lastIndexOf("uni"));
-    System.out.println(words.lastIndexOf("ebi"));
-    System.out.println(words.lastIndexOf("una"));
-   System.out.println(words);
-   removeDuplicates(words);
-   System.out.println(words);
-   SuperArray setA = new SuperArray();
-   setA.add("9");
-   setA.add("1");
-   setA.add("2");
-   setA.add("2");
-   setA.add("3");
-   setA.add("4");
-   SuperArray setB = new SuperArray();
-   setB.add("0");
-   setB.add("4");
-   setB.add("2");
-   setB.add("2");
-   setB.add("9");
-   System.out.println( findOverlap(setA,setB));
-   SuperArray SetC = new SuperArray();
-   SuperArray SetD = new SuperArray();
-   System.out.println(SetC.equals(SetD));
-   System.out.println(words);
-   System.out.println(setB);
-   words.add("10");
-   words.add("10");
-   words.add("10");
-   words.add("10");
-   setB.add("test");
-   System.out.println(zip(words,setB) );
+    //SuperArray TestForConstructor = new SuperArray(-1);
+
+    //SuperArray TestForGet = new SuperArray (10);
+    //TestForGet.add("0");
+    //TestForGet.add("1");
+    //TestForGet.add("2");
+    //TestForGet.add("3");
+    //System.out.println(TestForGet.get(4));
+    //System.out.println(TestForGet.get(-1));
+    //SuperArray TestForGet2 = new SuperArray (0);
+    //System.out.println(TestForGet2.get(0));
+    //SuperArray TestForGet3 = new SuperArray (4);
+    //TestForGet3.add("0");
+    //TestForGet3.add("1");
+    //TestForGet3.add("2");
+    //TestForGet3.add("3");
+    //System.out.println(TestForGet3.get(4));
+
+    //SuperArray TestForSet = new SuperArray ();
+    //TestForSet.add("0");
+    //TestForSet.add("1");
+    //TestForSet.add("2");
+    //TestForSet.add("3");
+    //TestForSet.set(6,"hi");
+    //TestForSet.set(-1,"hi");
+    //SuperArray TestForSet2 = new SuperArray ();
+    //TestForSet2.set(0,"hi");
+
+    //SuperArray TestForAdd = new SuperArray ();
+    //TestForAdd.add("hi");
+    //TestForAdd.add("hola");
+    //TestForAdd.add("ni hao");
+    //TestForAdd.add("salve");
+    //TestForAdd.add(6,"konichiwa");
+    //TestForAdd.add(0,"yeet");
+    //TestForAdd.add(-1,"hello");
+    //SuperArray TestForAdd2 = new SuperArray ();
+    //TestForAdd2.add(0,"hello");
+
+    //SuperArray TestForRemove = new SuperArray ();
+    //TestForRemove.add("0");
+    //TestForRemove.add("1");
+    //TestForRemove.add("2");
+    //TestForRemove.add("3");
+    //TestForRemove.remove(4);
+    SuperArray TestForRemove2 = new SuperArray ();
+    TestForRemove2.remove(0);
  }
 }
