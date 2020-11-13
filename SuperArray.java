@@ -38,7 +38,7 @@ public class SuperArray{
       throw new IndexOutOfBoundsException("Your index " + index + " is negative");
     }
     if (index >= size()){
-      throw new IndexOutOfBoundsException("Your index " + index + " is larger than the size");
+      throw new IndexOutOfBoundsException("Your index " + index + " is larger than the largest index");
     }
     return data[index];
   }
@@ -48,7 +48,7 @@ public class SuperArray{
       throw new IndexOutOfBoundsException("Your index " + index + " is negative");
     }
     if (index >= size()){
-      throw new IndexOutOfBoundsException("Your index " + index + " is larger than the size");
+      throw new IndexOutOfBoundsException("Your index " + index + " is larger than the largest index");
     }
     String a = data[index];
     data[index] = element;
@@ -98,18 +98,18 @@ public class SuperArray{
   }
 
   public void add(int index, String element){
-    if (index < 0){
-      throw new IndexOutOfBoundsException("Your index " + index + " is negative");
-    }
-    if (index > size()){
-      throw new IndexOutOfBoundsException("Your index " + index + " is larger than the size");
-    }
     String [] data2;
     if (data.length == size){
-      data2 = new String [data.length * 3 / 2];
+      data2 = new String [data.length * 3 / 2 + 1];
     }
     else {
       data2 = new String [data.length];
+    }
+    if (index < 0){
+      throw new IndexOutOfBoundsException("Your index " + index + " is negative");
+    }
+    if (index > size() ){
+      throw new IndexOutOfBoundsException("Your index " + index + " is larger than the largest index");
     }
     for (int i = 0; i < index; i ++){
       data2[i] = data[i];
@@ -127,7 +127,7 @@ public class SuperArray{
       throw new IndexOutOfBoundsException("Your index " + index + " is negative");
     }
     if (index >= size()){
-      throw new IndexOutOfBoundsException("Your index " + index + " is larger than the size");
+      throw new IndexOutOfBoundsException("Your index " + index + " is larger than the largest index");
     }
     String [] data2 = new String [data.length];
     int j = 0;
