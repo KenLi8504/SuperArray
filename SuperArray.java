@@ -98,28 +98,22 @@ public class SuperArray{
   }
 
   public void add(int index, String element){
-    String [] data2;
-    if (data.length == size){
-      data2 = new String [data.length * 3 / 2 + 1];
-    }
-    else {
-      data2 = new String [data.length];
-    }
+    String [] data2 = new String [size() + 1];
     if (index < 0){
       throw new IndexOutOfBoundsException("Your index " + index + " is negative");
     }
     if (index > size() ){
       throw new IndexOutOfBoundsException("Your index " + index + " is larger than the largest index");
     }
-    for (int i = 0; i < index; i ++){
+    for (int i = 0; i <index; i++){
       data2[i] = data[i];
     }
     data2[index] = element;
-    for (int i = index; i < data.length - 1; i ++){
-      data2[i + 1] = data[i];
+    for (int i = index; i< size; i++){
+      data2[i+1] = data[i];
     }
-    data = data2;
     size = size + 1;
+    data = data2;
   }
 
   public String remove(int index){
